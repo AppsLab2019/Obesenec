@@ -1,2 +1,2 @@
-# iq-test
-Vymyslíme otázky a na základe odpovedí bude aplikácia hodnotiť IQ. Budeme používať rôzne switche a dizajnové vychytávky.Budú tam jednotlivé vyhodnotenia vašej inteligencie (inteligent,priemerný, podpriemerný,...)
+# Obesenec
+Ide o krátku hru ktorej princípom je uhádnuť slovo bez toho aby ste prehrali. Bude Vám pri tom pomáhať obrázok obesenca aby ste vedeli ako na tom ste.
