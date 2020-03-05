@@ -14,20 +14,9 @@ namespace Obesenec.Model
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        private readonly MainViewModel viewModel;
         public MainPage()
         {
-            InitializeComponent();
-            
-            string[] Words = { "auto", "okno", "svet", "voda", "kryt" };
-            Random rnd = new Random();
-            int index = rnd.Next(Words.Length);
-            String s = Convert.ToString(Words[index]);
-            var chars = s.ToCharArray();
-            viewModel = new MainViewModel();
-            BindingContext = viewModel;
-
-            
+            InitializeComponent();           
         }
     }
 }
