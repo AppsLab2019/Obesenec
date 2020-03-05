@@ -17,11 +17,13 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid Grid.Row="1" >
-            <CollectionView ItemsSource="{Binding List}" ItemsLayout="HorizontalList" BackgroundColor="Accent">
+            <CollectionView ItemsSource="{Binding List}" 
+                            ItemsLayout="HorizontalList" 
+                            BackgroundColor="Yellow">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">
-                            <Label
+                            <Label 
                                 Text="{Binding Text}"
                                 TextColor="Black"
                                 VerticalTextAlignment="Center"
