@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
+using Obesenec.Model;
 
 namespace Obesenec.ViewModels
 {
@@ -12,14 +13,9 @@ namespace Obesenec.ViewModels
     {
         public MainViewModel()
         {
-            List = new ObservableCollection<Character>
-            {
-                new Character("V"),
-                new Character("L"),
-                new Character("A"),
-                new Character("D"),
-                new Character("O"),
-            };
+            var word = WordSource.GetRandomWord();
+            var characterList = word.GetListOfCharacters();
+            List = new ObservableCollection<Character>(characterList);
             CharacterPressedCommand = new Command<string>(CharacterPressed);
         }
 
@@ -48,56 +44,6 @@ namespace Obesenec.ViewModels
             {
                 // TODO
             }
-        }
-    }
-
-    public class Character : INotifyPropertyChanged
-    {
-        private string text;
-        private bool isShown;
-        private const string hiddenText = "_";
-
-        public Character(string text)
-        {
-            OriginalText = text;
-            Text = hiddenText;
-        }
-
-        public string OriginalText { get; }
-
-        public bool IsShown
-        {
-            get => isShown;
-            set
-            {
-                isShown = value;
-                if (isShown)
-                {
-                    Text = OriginalText;
-                }
-                else
-                {
-                    Text = hiddenText;
-                }
-            }
-        }
-
-        public string Text
-        {
-            get => text;
-            set
-            {
-                if (value == text) return;
-                text = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
