@@ -17,10 +17,12 @@ namespace Obesenec.ViewModels
             var characterList = word.GetListOfCharacters();
             List = new ObservableCollection<Character>(characterList);
             CharacterPressedCommand = new Command<string>(CharacterPressed);
+            PressedCharacters = new List<string>();
         }
 
         public ObservableCollection<Character> List { get; }
         public Command CharacterPressedCommand { get; }
+        public List<string> PressedCharacters { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         
@@ -31,10 +33,15 @@ namespace Obesenec.ViewModels
 
         private void CharacterPressed(string character)
         {
+            if (PressedCharacters.Contains(character))
+                return;
+
+            PressedCharacters.Add(character);
+
             bool isFound = false;
             foreach (var item in List)
             {
-                if (item.OriginalText == character)
+                if (item.OriginalText.ToLower() == character.ToLower())
                 {
                     item.IsShown = true;
                     isFound = true;

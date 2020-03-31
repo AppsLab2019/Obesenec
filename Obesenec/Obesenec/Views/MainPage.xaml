@@ -6,6 +6,7 @@
              xmlns:vm="clr-namespace:Obesenec.ViewModels"
              mc:Ignorable="d"
              x:Class="Obesenec.Model.MainPage">
+    
     <ContentPage.BindingContext>
         <vm:MainViewModel/>
     </ContentPage.BindingContext>

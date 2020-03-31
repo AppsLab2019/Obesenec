@@ -15,7 +15,7 @@ namespace Obesenec.Model
             new Word("voda"),
             new Word("kryt"),
             new Word("pes"),
-
+            new Word("automobil"),
         };
 
         public static Word GetRandomWord()
