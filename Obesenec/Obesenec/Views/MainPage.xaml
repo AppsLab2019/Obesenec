@@ -17,10 +17,13 @@
             <RowDefinition Height="80" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+        <Image Source="obecenec1.png" />
+        </Grid>
         <Grid Grid.Row="1" >
             <CollectionView ItemsSource="{Binding List}" 
                             ItemsLayout="HorizontalList" 
-                            BackgroundColor="Yellow">
+                           >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">

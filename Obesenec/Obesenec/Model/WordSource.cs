@@ -15,6 +15,10 @@ namespace Obesenec.Model
             new Word("voda"),
             new Word("kryt"),
             new Word("pes"),
+            new Word("program"),
+            new Word("kvet"),
+            new Word("policajt"),
+            new Word("stanica"),
             new Word("automobil"),
         };
 

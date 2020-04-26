@@ -5788,10 +5788,49 @@ namespace Obesenec.Droid
 			public const int notify_panel_notification_icon_bg = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int tooltip_frame_dark = 2131165300;
+			public const int Obecenec1 = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int tooltip_frame_light = 2131165301;
+			public const int Obecenec10 = 2131165301;
+			
+			// aapt resource value: 0x7F070076
+			public const int Obecenec11 = 2131165302;
+			
+			// aapt resource value: 0x7F070077
+			public const int Obecenec12 = 2131165303;
+			
+			// aapt resource value: 0x7F070078
+			public const int Obecenec13 = 2131165304;
+			
+			// aapt resource value: 0x7F070079
+			public const int Obecenec2 = 2131165305;
+			
+			// aapt resource value: 0x7F07007A
+			public const int Obecenec3 = 2131165306;
+			
+			// aapt resource value: 0x7F07007B
+			public const int Obecenec4 = 2131165307;
+			
+			// aapt resource value: 0x7F07007C
+			public const int Obecenec5 = 2131165308;
+			
+			// aapt resource value: 0x7F07007D
+			public const int Obecenec6 = 2131165309;
+			
+			// aapt resource value: 0x7F07007E
+			public const int Obecenec7 = 2131165310;
+			
+			// aapt resource value: 0x7F07007F
+			public const int Obecenec8 = 2131165311;
+			
+			// aapt resource value: 0x7F070080
+			public const int Obecenec9 = 2131165312;
+			
+			// aapt resource value: 0x7F070081
+			public const int tooltip_frame_dark = 2131165313;
+			
+			// aapt resource value: 0x7F070082
+			public const int tooltip_frame_light = 2131165314;
 			
 			static Drawable()
 			{
