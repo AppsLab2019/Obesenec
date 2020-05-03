@@ -18,7 +18,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-        <Image Source="obecenec1.png" />
+        <Image Source= "{Binding ImageSource}"/>
         </Grid>
         <Grid Grid.Row="1" >
             <CollectionView ItemsSource="{Binding List}" 

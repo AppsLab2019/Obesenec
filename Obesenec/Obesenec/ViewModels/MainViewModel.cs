@@ -11,6 +11,8 @@ namespace Obesenec.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+        public string ImageSource { get; set; }
+        private int _index;
         public MainViewModel()
         {
             var word = WordSource.GetRandomWord();
@@ -18,6 +20,8 @@ namespace Obesenec.ViewModels
             List = new ObservableCollection<Character>(characterList);
             CharacterPressedCommand = new Command<string>(CharacterPressed);
             PressedCharacters = new List<string>();
+            ImageSource = "HangMan1.png";
+            _index = 2;
         }
 
         public ObservableCollection<Character> List { get; }
@@ -48,8 +52,10 @@ namespace Obesenec.ViewModels
                 }
             }
             if (isFound == false)
-            {
-                // TODO
+            { 
+                ImageSource = $"HangMan{_index}.png";
+                OnPropertyChanged(nameof(ImageSource));
+                _index++;
             }
         }
     }

@@ -67,8 +67,8 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Obecenec1.png" />
-    <AndroidResource Include="Resources\drawable\Obecenec2.png">
+    <AndroidResource Include="Resources\drawable\HangMan1.png" />
+    <AndroidResource Include="Resources\drawable\HangMan2.png">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
     </AndroidResource>
@@ -96,37 +96,37 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Obecenec10.png" />
+    <AndroidResource Include="Resources\drawable\HangMan10.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Obecenec11.png" />
+    <AndroidResource Include="Resources\drawable\HagMan11.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Obecenec12.png" />
+    <AndroidResource Include="Resources\drawable\HangMan12.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Obecenec13.png" />
+    <AndroidResource Include="Resources\drawable\HangMan13.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Obecenec3.png" />
+    <AndroidResource Include="Resources\drawable\HangMan3.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Obecenec4.png" />
+    <AndroidResource Include="Resources\drawable\HangMan4.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Obecenec5.png" />
+    <AndroidResource Include="Resources\drawable\HangMan5.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Obecenec7.png" />
+    <AndroidResource Include="Resources\drawable\HangMan7.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Obecenec6.png" />
+    <AndroidResource Include="Resources\drawable\HangMan6.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Obecenec8.png" />
+    <AndroidResource Include="Resources\drawable\HangMan8.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Obecenec9.png" />
+    <AndroidResource Include="Resources\drawable\HangMan9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
