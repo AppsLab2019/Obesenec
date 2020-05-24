@@ -52,10 +52,13 @@ namespace Obesenec.ViewModels
                 }
             }
             if (isFound == false)
-            { 
+            {
+                if (_index >= 13)
+                    _index = 13;
                 ImageSource = $"HangMan{_index}.png";
                 OnPropertyChanged(nameof(ImageSource));
                 _index++;
+         
             }
         }
     }

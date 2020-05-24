@@ -5734,13 +5734,13 @@ namespace Obesenec.Droid
 			public const int design_snackbar_background = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int HagMan11 = 2131165282;
+			public const int HangMan1 = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int HangMan1 = 2131165283;
+			public const int HangMan10 = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int HangMan10 = 2131165284;
+			public const int HangMan11 = 2131165284;
 			
 			// aapt resource value: 0x7F070065
 			public const int HangMan12 = 2131165285;

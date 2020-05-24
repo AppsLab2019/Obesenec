@@ -14,9 +14,6 @@ namespace Obesenec.Model
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        public MainPage()
-        {
-            InitializeComponent();           
-        }
+        public MainPage() => InitializeComponent();
     }
 }
