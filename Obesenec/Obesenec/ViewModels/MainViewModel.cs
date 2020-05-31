@@ -29,7 +29,7 @@ namespace Obesenec.ViewModels
         public List<string> PressedCharacters { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        
+
         private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -53,8 +53,12 @@ namespace Obesenec.ViewModels
             }
             if (isFound == false)
             {
-                if (_index >= 13)
-                    _index = 13;
+                if (_index >= 14)
+                {
+                    Application.Current.MainPage.DisplayAlert("GG", "You LOST!", "OK");
+                    _index = 1;
+                }
+                    
                 ImageSource = $"HangMan{_index}.png";
                 OnPropertyChanged(nameof(ImageSource));
                 _index++;

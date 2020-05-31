@@ -38,7 +38,7 @@ namespace Obesenec.Model
         {
             new Word("mikina"),
             new Word("sveter"),
-            new Word("nohavice")
+            new Word("nohavice") 
         };
 
         public static Word GetRandomWord()
