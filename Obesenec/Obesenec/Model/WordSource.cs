@@ -21,6 +21,7 @@ namespace Obesenec.Model
             new Word("policajt"),
             new Word("stanica"),
             new Word("automobil"),
+            new Word("matematika"),
         };
         private static readonly List<Word> dopravaWords = new List<Word>()
         {

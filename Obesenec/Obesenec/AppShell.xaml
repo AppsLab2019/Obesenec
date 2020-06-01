@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:views="clr-namespace:Obesenec;assembly=Obesenec"
-             x:Class="Obesenec.AppShell">
+             x:Class="Obesenec.AppShell"
+             BackgroundColor="#121212">
     <ShellItem>
         <ShellContent>
             <views:MainMenu />

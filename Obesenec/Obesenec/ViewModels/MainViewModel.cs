@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 using Obesenec.Model;
 
+
 namespace Obesenec.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
@@ -55,15 +56,19 @@ namespace Obesenec.ViewModels
             {
                 if (_index >= 14)
                 {
-                    Application.Current.MainPage.DisplayAlert("GG", "You LOST!", "OK");
+                    Application.Current.MainPage.DisplayAlert("You LOST!", "You can RETRY game category or EXIT game.", "EXIT", "RETRY");
                     _index = 1;
                 }
-                    
+
                 ImageSource = $"HangMan{_index}.png";
                 OnPropertyChanged(nameof(ImageSource));
                 _index++;
-         
             }
+             // else if (isFound == true)
+            //  {
+            //  Application.Current.MainPage.DisplayAlert("YOU WON!", "You can RETRY game category or EXIT game.", "EXIT", "RETRY");
+
+           //  }
         }
     }
 }

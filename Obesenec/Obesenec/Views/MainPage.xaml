@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:Obesenec.ViewModels"
              mc:Ignorable="d"
-             x:Class="Obesenec.Model.MainPage">
+             x:Class="Obesenec.Model.MainPage"
+             BackgroundColor="#121212">
     
     <ContentPage.BindingContext>
         <vm:MainViewModel/>
@@ -22,14 +23,14 @@
         </Grid>
         <Grid Grid.Row="1" >
             <CollectionView ItemsSource="{Binding List}" 
-                            ItemsLayout="HorizontalList">
+                            ItemsLayout="HorizontalList"
+                            VerticalOptions="CenterAndExpand">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Padding="10">
-                            <Label 
+                        <Grid  Padding="20" Margin="5, 0, 0, 5">
+                            <Label VerticalOptions="CenterAndExpand"
                                 Text="{Binding Text}"
-                                TextColor="Black"
-                                VerticalTextAlignment="Center"
+                                TextColor="White" 
                                 FontAttributes="Bold"
                                 FontSize="Title"/>
                         </Grid>
@@ -64,9 +65,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="A"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"     
+                BackgroundColor="#1E1E1E"
                 Margin="3"
                 />
             <Button 
@@ -80,9 +79,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="B"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                BackgroundColor="#1E1E1E"
                 Margin="3"
                 />
             <Button 
@@ -96,9 +93,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="C"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                BackgroundColor="#1E1E1E"
                 Margin="3"    
                 />
             <Button 
@@ -112,9 +107,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="D"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                BackgroundColor="#1E1E1E"
                 Margin="3"
                 />
             <Button 
@@ -128,9 +121,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="E"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                BackgroundColor="#1E1E1E"
                 Margin="3"    
                 />
             <Button 
@@ -144,9 +135,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="F"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                BackgroundColor="#1E1E1E"
                 Margin="3"
                  />
             <Button 
@@ -160,9 +149,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="G"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                BackgroundColor="#1E1E1E"
                  Margin="3"
                  />
             <Button 
@@ -176,9 +163,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="H"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                 Margin="3"
                  />
             <Button 
@@ -192,9 +177,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="I"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                 Margin="3"    
                  />
             <Button 
@@ -208,9 +191,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="J"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                BackgroundColor="#1E1E1E"
                 Margin="3"   
                  />
             <Button 
@@ -224,9 +205,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="K"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                 Margin="3"   
                  />
             <Button 
@@ -240,9 +219,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="L"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                 Margin="3"
                  />
             <Button 
@@ -256,9 +233,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="M"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                 Margin="3"
                  />
             <Button 
@@ -272,9 +247,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="N"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                  Margin="3"
                  />
             <Button 
@@ -288,9 +261,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="O"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                 Margin="3"   
                  />
             <Button 
@@ -304,9 +275,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="P"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                BackgroundColor="#1E1E1E"
                  Margin="3"
                  />
             <Button 
@@ -320,9 +289,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="R"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                 Margin="3"    
                  />
             <Button 
@@ -336,9 +303,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="S"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                  Margin="3"   
                  />
             <Button 
@@ -352,9 +317,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="T"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                 Margin="3"
                  />
             <Button 
@@ -368,9 +331,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="U"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                  Margin="3"
                  />
             <Button 
@@ -384,9 +345,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="V"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                 Margin="3"
                  />
             <Button 
@@ -400,9 +359,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="X"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                 Margin="3"
                  />
             <Button 
@@ -416,9 +373,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="Y"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                 Margin="3"
                  />
             <Button 
@@ -432,9 +387,7 @@
                 Command="{Binding CharacterPressedCommand}"
                 CommandParameter="Z"
                 TextColor="White"   
-                BackgroundColor="Black"
-                BorderColor="Red"
-                BorderWidth="3"
+                 BackgroundColor="#1E1E1E"
                 Margin="3"
                  />
         </Grid>
