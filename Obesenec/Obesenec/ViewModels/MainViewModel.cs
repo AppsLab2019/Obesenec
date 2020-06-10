@@ -56,8 +56,10 @@ namespace Obesenec.ViewModels
             {
                 if (_index >= 14)
                 {
-                    Application.Current.MainPage.DisplayAlert("You LOST!", "You can RETRY game category or EXIT game.", "EXIT", "RETRY");
+                    Application.Current.MainPage.DisplayAlert("You LOSE!", "You can RETRY game category or EXIT game.", "RETRY", "BACK TO MENU");
                     _index = 1;
+
+                    //Application.Current.MainPage.Navigation.PushAsync(new MainMenu());
                 }
 
                 ImageSource = $"HangMan{_index}.png";
@@ -66,7 +68,7 @@ namespace Obesenec.ViewModels
             }
              // else if (isFound == true)
             //  {
-            //  Application.Current.MainPage.DisplayAlert("YOU WON!", "You can RETRY game category or EXIT game.", "EXIT", "RETRY");
+            //  Application.Current.MainPage.DisplayAlert("YOU WON!", "You can RETRY game category or EXIT game.", "RETRY", "BACK TO MENU");
 
            //  }
         }

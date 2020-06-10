@@ -27,8 +27,8 @@
                             VerticalOptions="CenterAndExpand">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid  Padding="20" Margin="5, 0, 0, 5">
-                            <Label VerticalOptions="CenterAndExpand"
+                        <Grid  Padding="10" Margin="5, 0, 0, 5">
+                            <Label HorizontalOptions="CenterAndExpand"
                                 Text="{Binding Text}"
                                 TextColor="White" 
                                 FontAttributes="Bold"
