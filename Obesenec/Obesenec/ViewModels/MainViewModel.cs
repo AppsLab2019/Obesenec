@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Obesenec.Model;
 
@@ -14,6 +14,9 @@ namespace Obesenec.ViewModels
     {
         public string ImageSource { get; set; }
         private int _index;
+        private int _charactersFound;
+        private const int MaxNumberOfWrongGuesses = 14;
+
         public MainViewModel()
         {
             var word = WordSource.GetRandomWord();
@@ -36,41 +39,72 @@ namespace Obesenec.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private void CharacterPressed(string character)
+        private async void CharacterPressed(string character)
         {
             if (PressedCharacters.Contains(character))
                 return;
 
             PressedCharacters.Add(character);
 
-            bool isFound = false;
+            var isFound = false;
             foreach (var item in List)
             {
                 if (item.OriginalText.ToLower() == character.ToLower())
                 {
                     item.IsShown = true;
                     isFound = true;
+                    _charactersFound++;
                 }
             }
-            if (isFound == false)
-            {
-                if (_index >= 14)
-                {
-                    Application.Current.MainPage.DisplayAlert("You LOSE!", "You can RETRY game category or EXIT game.", "RETRY", "BACK TO MENU");
-                    _index = 1;
 
-                    //Application.Current.MainPage.Navigation.PushAsync(new MainMenu());
+            //win
+            if (_charactersFound == List.Count)
+            {
+                await HandleGameResultAsync(true);
+            }
+
+            if (!isFound)
+            {
+                //lose
+                if (_index == MaxNumberOfWrongGuesses)
+                {
+                    await HandleGameResultAsync(false);
                 }
 
-                ImageSource = $"HangMan{_index}.png";
-                OnPropertyChanged(nameof(ImageSource));
+                //continue
+                ChangeImage(_index);
                 _index++;
             }
-             // else if (isFound == true)
-            //  {
-            //  Application.Current.MainPage.DisplayAlert("YOU WON!", "You can RETRY game category or EXIT game.", "RETRY", "BACK TO MENU");
 
-           //  }
+        }
+
+        private async Task HandleGameResultAsync(bool isWin)
+        {
+            var gameResult = isWin ? "WON" : "LOST";
+            var resultTask = await Application.Current.MainPage.DisplayAlert($"You {gameResult}!", "You can RETRY game category or EXIT game.", "RETRY", "BACK TO MENU");
+
+            if (!resultTask)
+            {
+                //back to menu
+                await Application.Current.MainPage.Navigation.PushAsync(new MainMenu());
+                ResetRound();
+            }
+
+            //TODO: retry button
+
+        }
+
+        private void ResetRound()
+        {
+            _index = 1;
+            _charactersFound = 0;
+            ChangeImage(_index);
+        }
+
+        private void ChangeImage(int imageIndex)
+        {
+            ImageSource = $"HangMan{imageIndex}.png";
+            OnPropertyChanged(nameof(ImageSource));
         }
     }
 }
