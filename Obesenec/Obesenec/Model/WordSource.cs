@@ -26,6 +26,11 @@ namespace Obesenec.Model
         private static readonly List<Word> dopravaWords = new List<Word>()
         {
             new Word("auto"),
+            new Word("vlak"),
+            new Word("autobus"),
+            new Word("semafor"),
+            new Word("MHD"),
+            new Word("bicykel"),
             new Word("policajt"),
             new Word("automobil")
         };
@@ -33,13 +38,21 @@ namespace Obesenec.Model
         {
             new Word("jablko"),
             new Word("hotdog"),
+            new Word("polievka"),
+            new Word("zemiak"),
+            new Word("paradajka"),
+            new Word("mrkva"),
             new Word("banan")
         };
         private static readonly List<Word> oblecenieWords = new List<Word>()
         {
             new Word("mikina"),
             new Word("sveter"),
-            new Word("nohavice") 
+            new Word("nohavice"),
+            new Word("bluza"),
+            new Word("bunda"),
+            new Word("teplaky"),
+            new Word("rukavice")
         };
 
         public static Word GetRandomWord()

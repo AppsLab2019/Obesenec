@@ -81,7 +81,7 @@ namespace Obesenec.ViewModels
         private async Task HandleGameResultAsync(bool isWin)
         {
             var gameResult = isWin ? "WON" : "LOST";
-            var resultTask = await Application.Current.MainPage.DisplayAlert($"You {gameResult}!", "You can RETRY game category or EXIT game.", "RETRY", "BACK TO MENU");
+            var resultTask = await Application.Current.MainPage.DisplayAlert($"You {gameResult}!", "You can play NEW GAME or BACK TO MENU and select new category!", "NEW GAME", "BACK TO MENU");
 
             if (!resultTask)
             {
@@ -90,7 +90,8 @@ namespace Obesenec.ViewModels
                 ResetRound();
             }
 
-            //TODO: retry button
+            //TODO: retry button   
+            await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
 
         }
 
